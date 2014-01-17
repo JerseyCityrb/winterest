@@ -1,1 +1,7 @@
 <%= link_to "Add a Pin!", new_pin_path %>
+
+<% @pins.each do |pin| %>
+	<h1><%= pin.title %></h1>
+	<p><%= pin.description %></p>
+	<%= pin.source %>
+<% end %>
